@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Details</title>
+    <link rel="stylesheet" href="show_blog.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+.blog-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-details h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.publisher {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Blog Post Details</h1>
+        <a href="./home.html"><button class="back-btn" onclick="goBack()">← Back to Blog List</button></a>
+    </header>
+
+    <section class="blog-details">
+        <h2 id="blog-title">Blog Post Title</h2>
+        <p class="publisher">Published by: <span id="blog-publisher">John Doe</span></p>
+        <p class="description" id="blog-description">This is the full description of the blog post. It goes into detail about the content of the post, providing readers with insight and valuable information.</p>
+    </section>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";  // Adjust the link to the main blog page
+        }
+    </script>
+</body>
+</html>

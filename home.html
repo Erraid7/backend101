@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <a href="add_blog.html"><button class="add-blog-btn">+ Add Blog</button></a>
+    </header>
+
+    <section class="blog-list">
+        <a href="./show_blog.html" class="blog-post">
+            <h2>Blog Post Title 1</h2>
+            <p class="publisher">Published by: Alice</p>
+            <p class="description">This is a description of the first blog post. It covers interesting topics and insights.</p>
+        </a>
+
+        <a href="./show_blog.html" class="blog-post">
+            <h2>Blog Post Title 2</h2>
+            <p class="publisher">Published by: Bob</p>
+            <p class="description">This is a description of the second blog post. It's full of useful tips and tricks.</p>
+        </a>
+
+        <a href="./show_blog.html" class="blog-post">
+            <h2>Blog Post Title 3</h2>
+            <p class="publisher">Published by: Charlie</p>
+            <p class="description">This is a description of the third blog post. Explore some exciting new ideas here.</p>
+        </a>
+    </section>
+
+    <script>
+        function addBlog() {
+            alert("Redirecting to add new blog post...");
+            // You can add redirection logic here, like window.location.href = "/add-blog";
+        }
+    </script>
+</body>
+</html>
