@@ -9,23 +9,45 @@
 <body>
     <header>
         <h1>My Blog</h1>
-        <a href="add_blog.html"><button class="add-blog-btn">+ Add Blog</button></a>
+        <a href="/add_blog"><button class="add-blog-btn">+ Add Blog</button></a>
     </header>
 
     <section class="blog-list">
-        <a href="./show_blog.html" class="blog-post">
-            <h2>Blog Post Title 1</h2>
-            <p class="publisher">Published by: Alice</p>
-            <p class="description">This is a description of the first blog post. It covers interesting topics and insights.</p>
+
+        <% for (let i = 0; i < 3; i++) { %>
+            <a href="./show_blog" class="blog-post">
+                <h2>
+                    <%= title %>
+                </h2>
+                <p class="publisher">
+                    <%= author %>
+                </p>
+                <p class="description">
+                    <%= discription %>
+                </p>
+            </a>
+
+        <% } %>
+
+        <a href="./show_blog" class="blog-post">
+            <h2>
+                <%= title %>
+            </h2>
+            <p class="publisher">
+                <%= author %>
+            </p>
+            <p class="description">
+                <%= discription %>
+            </p>
         </a>
 
-        <a href="./show_blog.html" class="blog-post">
+        <a href="./show_blog" class="blog-post">
             <h2>Blog Post Title 2</h2>
             <p class="publisher">Published by: Bob</p>
             <p class="description">This is a description of the second blog post. It's full of useful tips and tricks.</p>
         </a>
 
-        <a href="./show_blog.html" class="blog-post">
+        <a href="./show_blog" class="blog-post">
             <h2>Blog Post Title 3</h2>
             <p class="publisher">Published by: Charlie</p>
             <p class="description">This is a description of the third blog post. Explore some exciting new ideas here.</p>
@@ -37,6 +59,8 @@
             alert("Redirecting to add new blog post...");
             // You can add redirection logic here, like window.location.href = "/add-blog";
         }
+        // const user = "rami";
+        // console.log(user);
     </script>
 </body>
 </html>
