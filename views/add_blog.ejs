@@ -17,14 +17,42 @@
             <label for="title">Post Title</label>
             <input type="text" id="title" name="title" required>
 
-            <label for="publisher">Publisher Name</label>
-            <input type="text" id="publisher" name="publisher" required>
+            <label for="author">author Name</label>
+            <input type="text" id="author" name="author" required>
 
-            <label for="description">Description</label>
-            <textarea id="description" name="description" rows="5" required></textarea>
+            <label for="content">content</label>
+            <textarea id="content" name="content" rows="5" required></textarea>
 
             <button type="submit" class="submit-btn">Submit Post</button>
         </form>
     </section>
 </body>
+
+<script>
+    const form = document.querySelector('.add-post-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const title = form.title.value;
+        const author = form.author.value;
+        const content = form.content.value;
+
+        console.log(title, author, content);
+        fetch('/add_blog', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ title, author, content })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                alert('Post submitted successfully!');
+                window.location.href = '/';
+            } else {
+                alert('Failed to submit post');
+            }
+        });
+    });
+</script>
 </html>

@@ -77,9 +77,15 @@ h1 {
     </header>
 
     <section class="blog-details">
-        <h2 id="blog-title">Blog Post Title</h2>
-        <p class="publisher">Published by: <span id="blog-publisher">John Doe</span></p>
-        <p class="description" id="blog-description">This is the full description of the blog post. It goes into detail about the content of the post, providing readers with insight and valuable information.</p>
+        <h2 id="blog-title"><%= blog.title %></h2>
+        <p class="publisher">Published by: <span id="blog-publisher"><%= blog.author %></span></p>
+        <p class="description" id="blog-description"><%= blog.content %></p>
     </section>
 </body>
+
+<script>
+    function goBack() {
+        window.referer = "./";
+    }
+</script>
 </html>
